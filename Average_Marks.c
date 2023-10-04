@@ -17,9 +17,10 @@ int main()
     printf("\nEnter Computer Marks :");
     scanf("%f",&s5);
 
-    float sum=s1+s2+s3+s4+s5;
-    float p=(sum/5.0);
+    float sum=s1+s2+s3+s4+s5;   //Calculating sum
+    float p=(sum/5.0);  //Calclating Average
 
     printf("Total : %f",sum);
     printf("Percentage : %f",p);
+    return 0;
 }
