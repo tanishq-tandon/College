@@ -1,45 +1,43 @@
-#include<stdio.h>
-int main()
-{
-    double n1,n2;
+#include <stdio.h>
+
+int main() {
+    double a,b;
     char ch;
-    printf("Enter First Operand : ");
-    scanf("%lf",&n1);
+
+    printf("Enter the first operand: ");
+    scanf("%lf", &a);
+
     printf("Enter the operator (+, -, *, /): ");
-    scanf("%c",&ch);
-    printf("Enter Second Operand : ");
-    scanf("%lf",&n1);
+    scanf(" %c", &ch);
+
+    printf("Enter the second operand: ");
+    scanf("%lf", &b);
 
     double result;
 
-    switch(ch)
-    {
+    switch (ch) {
         case '+':
-            result = n1+n2;
+            result = a + b;
             break;
-        
         case '-':
-            result = n1-n2;
+            result = a - b;
             break;
-
         case '*':
-            result = n1*n2;
+            result = a * b;
             break;
-
         case '/':
-            if(n2==0)
-            {
+            if(b!=0){
+                result = a/b;
+            }
+            else{
                 printf("Error : can not divide by zero");
             }
-            else
-            {
-                result = n1/n2;
-            }
             break;
-
         default:
-            printf("Enter Valid Operator");
+            printf("Invalid operator.\n");
+            return 1;
     }
-    printf("Result : %lf",result);
+
+    printf("Result: %lf\n",result);
     return 0;
 }
